@@ -31,6 +31,32 @@
             <li></li>
             <li></li>
         </ul>
+        <h2>The Journey so far</h2>
+        <ol>
+            <li>imaged a RasPiOS Lite 64 bit onto pi 4 8gb model</li>
+            <li>52 pi wiki for EP-0152 board oled setup and fan control</li>
+            <ul><li>also looked at another youtuber's video on having the fan speed up and slow down, but created too much of a buzzing noise, so i just opted for the regular in-built fan controls via raspi-config</li></ul>
+            <li>followed instructions from TechCraft youtube to enable usb-c OTG</li>
+            <li>created bash aliases</li>
+            <ul>
+                <li>alias stress="stress-ng --cpu 4 --cpu-method fft"</li>
+                <li>alias temp="watch -n 1 vcgencmd measure_temp; vcgencmd measure_volts; vcgencmd get_throttled"</li>
+                <li>alias shutdown="sudo shutdown -h now"</li>
+            </ul>
+            <li>ssh keygen copy to pi without having to constantly enter password</li>
+            <li>install docker, create docker-compose.yml file, set up code-server using linuxserver.io's docker image</li>
+            <li>created git and uploaded repo</li>
+            <li>started configuring an efficient VNC without using raspi-config's built in realVNC enable</li>
+            <ul>
+                <li>used a script from <a href="https://github.com/gitbls/RPiVNCHowTo">https://github.com/gitbls/RPiVNCHowTo</a></li>
+                <li>one problem I ran into was that I couldn't find the wifi icon(still cant) and at some point the wlan0 interface stopped working completely</li>
+                <ul>
+                    <li>I had to end up re-typing ssid and password using raspi-config for it to work again, but im not sure why it was like that as the information was already inside of wpa_supplicant</li>
+                </ul>
+                <li>KDE-Plasma might be too heavy for the pi, so I'm going to try to trim it back down to XFCE or something</li>
+            </ul>
+            <li></li>
+        </ol>
     </main>
 </body>
 </html>
